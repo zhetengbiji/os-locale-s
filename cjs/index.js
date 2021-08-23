@@ -30,8 +30,8 @@ const getStdOutSync = (command, args) => {
 };
 const normalise = (input) => input.replace(/_/, "-");
 function validate(result, processor) {
-    if (typeof result === "string" && result.length) {
-        return processor ? processor(result) : result.trim();
+    if (typeof result === "string" || result.length) {
+        return processor ? processor(result.toString()) : result.trim();
     }
     return defaultLocale;
 }
