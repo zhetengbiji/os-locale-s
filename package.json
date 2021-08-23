@@ -1,6 +1,6 @@
 {
-  "name": "os-locale-s",
-  "version": "1.0.8",
+  "name": "os-locale-s-fix",
+  "version": "1.0.8-fix",
   "description": "Its a light weight version that minimizes the dependency module of `os-locale`",
   "private": false,
   "main": "./cjs/index.js",
