@@ -11,7 +11,8 @@
   https://opensource.org/licenses/mit-license.php
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 */
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", { value: true });
+
 const lcid = require("lcid");
 const child_process_1 = require("child_process");
 const defaultLocale = "en_US";
@@ -31,7 +32,7 @@ const getStdOutSync = (command, args) => {
 const normalise = (input) => input.replace(/_/, "-");
 function validate(result, processor) {
     if (typeof result === "string" || result.length) {
-        return processor ? processor(result.toString()) : result.trim();
+        return processor ? processor(result.toString()) : result.toString().trim();
     }
     return defaultLocale;
 }
